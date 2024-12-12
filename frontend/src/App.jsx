@@ -5,8 +5,10 @@ import SignUpPage from "./pages/SignUpPage"
 import SignInPage from "./pages/SignInPage"
 import SettingsPage from "./pages/SettingsPage"
 import ProfilePage from "./pages/ProfilePage"
+import { axiosInstance } from "./lib/axios";
 
 const App = () => {
+  axiosInstance.get()
   return (
     <div>
       <Navbar />
