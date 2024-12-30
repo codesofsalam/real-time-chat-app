@@ -5,33 +5,42 @@ import { useChatStore } from "../store/useChatStore";
 const ChatHeader = () => {
   const { selectedUser, setSelectedUser } = useChatStore();
   const { onlineUsers } = useAuthStore();
+  const isOnline = onlineUsers.includes(selectedUser._id);
 
   return (
-    <div className="p-2.5 border-b border-base-300">
+    <div className="px-6 py-4 border-b bg-white shadow-sm">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          {/* Avatar */}
-          <div className="avatar">
-            <div className="size-10 rounded-full relative">
-              <img src={selectedUser.profilePic || "/avatar.png"} alt={selectedUser.fullName} />
+        <div className="flex items-center gap-4">
+          <div className="relative">
+            <div className="size-12 rounded-full ring-2 ring-blue-600 overflow-hidden">
+              <img
+                src={selectedUser.profilePic || "/avatar.png"}
+                alt={selectedUser.fullName}
+                className="object-cover w-full h-full"
+              />
             </div>
+            {isOnline && (
+              <div className="absolute bottom-0 right-0 size-3 rounded-full bg-green-500 ring-2 ring-white" />
+            )}
           </div>
 
-          {/* User info */}
           <div>
-            <h3 className="font-medium">{selectedUser.fullName}</h3>
-            <p className="text-sm text-base-content/70">
-              {onlineUsers.includes(selectedUser._id) ? "Online" : "Offline"}
+            <h3 className="font-semibold text-gray-900">{selectedUser.fullName}</h3>
+            <p className={`text-sm ${isOnline ? 'text-green-600' : 'text-gray-500'}`}>
+              {isOnline ? 'Online' : 'Offline'}
             </p>
           </div>
         </div>
 
-        {/* Close button */}
-        <button onClick={() => setSelectedUser(null)}>
-          <X />
+        <button 
+          onClick={() => setSelectedUser(null)}
+          className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+        >
+          <X className="size-5 text-gray-600" />
         </button>
       </div>
     </div>
   );
 };
+
 export default ChatHeader;

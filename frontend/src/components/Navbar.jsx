@@ -6,46 +6,46 @@ const Navbar = () => {
   const { logout, authUser } = useAuthStore();
 
   return (
-    <header
-      className="bg-base-100 border-b border-base-300 fixed w-full top-0 z-40 
-    backdrop-blur-lg bg-base-100/80"
-    >
-      <div className="container mx-auto px-4 h-16">
-        <div className="flex items-center justify-between h-full">
-          <div className="flex items-center gap-8">
-            <Link
-              to="/"
-              className="flex items-center gap-2.5 hover:opacity-80 transition-all"
-            >
-              <div className="size-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                <MessageSquare className="w-5 h-5 text-primary" />
-              </div>
-              <h1 className="text-lg font-bold">SalamChat</h1>
-            </Link>
-          </div>
+    <header className="fixed w-full top-0 z-40 backdrop-blur-lg bg-white/80 border-b border-gray-200 ">
+      <div className="container mx-auto px-6 ">
+        <div className="flex items-center justify-between h-16">
+          <Link
+            to="/"
+            className="flex items-center gap-3 hover:opacity-90 transition-colors"
+          >
+            <div className="size-10 rounded-xl bg-blue-100 flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+              <MessageSquare className="size-5 text-blue-600" />
+            </div>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              SalamChat
+            </h1>
+          </Link>
 
           <div className="flex items-center gap-2">
             <Link
-              to={"/settings"}
-              className={`
-              btn btn-sm gap-2 transition-colors
-              
-              `}
+              to="/settings"
+              className="p-2 rounded-lg hover:bg-blue-50 transition-all inline-flex items-center gap-2"
             >
-              <Settings className="w-4 h-4" />
-              <span className="hidden sm:inline">Settings</span>
+              <Settings className="size-5 text-blue-600" />
+              <span className="hidden sm:inline font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Settings</span>
             </Link>
 
             {authUser && (
               <>
-                <Link to={"/profile"} className={`btn btn-sm gap-2`}>
-                  <User className="size-5" />
-                  <span className="hidden sm:inline">Profile</span>
+                <Link
+                  to="/profile"
+                  className="p-2 rounded-lg hover:bg-blue-50 transition-all inline-flex items-center gap-2"
+                >
+                  <User className="size-5 text-blue-600" />
+                  <span className="hidden sm:inline font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Profile</span>
                 </Link>
 
-                <button className="flex gap-2 items-center" onClick={logout}>
+                <button
+                  onClick={logout}
+                  className="p-2 rounded-lg text-red-600 hover:bg-red-50 transition-colors inline-flex items-center gap-2"
+                >
                   <LogOut className="size-5" />
-                  <span className="hidden sm:inline">Logout</span>
+                  <span className="hidden sm:inline font-medium">Logout</span>
                 </button>
               </>
             )}
@@ -55,4 +55,5 @@ const Navbar = () => {
     </header>
   );
 };
+
 export default Navbar;
