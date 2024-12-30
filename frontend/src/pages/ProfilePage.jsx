@@ -27,7 +27,9 @@ const ProfilePage = () => {
             <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               Your Profile
             </h1>
-            <p className="text-base-content/60 text-lg">Manage your personal information</p>
+            <p className="text-base-content/60 text-lg">
+              Manage your personal information
+            </p>
           </div>
 
           <div className="flex flex-col items-center gap-4">
@@ -46,7 +48,9 @@ const ProfilePage = () => {
                   flex items-center justify-center
                   shadow-lg transform hover:scale-110
                   transition-all duration-300
-                  ${isUpdatingProfile ? "animate-pulse pointer-events-none" : ""}
+                  ${
+                    isUpdatingProfile ? "animate-pulse pointer-events-none" : ""
+                  }
                 `}
               >
                 <Camera className="size-6 text-primary-content" />
@@ -61,7 +65,9 @@ const ProfilePage = () => {
               </label>
             </div>
             <p className="text-base text-base-content/60">
-              {isUpdatingProfile ? "Uploading..." : "Click the camera icon to update your photo"}
+              {isUpdatingProfile
+                ? "Uploading..."
+                : "Click the camera icon to update your photo"}
             </p>
           </div>
 
@@ -98,7 +104,9 @@ const ProfilePage = () => {
                   <Calendar className="size-4" />
                   Member Since
                 </div>
-                <span className="font-medium">{authUser.createdAt?.split("T")[0]}</span>
+                <span className="font-medium">
+                  {authUser.createdAt?.split("T")[0]}
+                </span>
               </div>
               <div className="flex items-center justify-between py-3">
                 <span className="text-base-content/70">Account Status</span>

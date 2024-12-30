@@ -1,4 +1,4 @@
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare } from "lucide-react";
 
 const AuthImagePattern = ({ subtitle }) => {
   return (
@@ -11,9 +11,7 @@ const AuthImagePattern = ({ subtitle }) => {
           <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
             SalamChat!
           </h2>
-          <p className="text-base-content/60 text-lg">
-            {subtitle}
-          </p>
+          <p className="text-base-content/60 text-lg">{subtitle}</p>
         </div>
       </div>
     </div>

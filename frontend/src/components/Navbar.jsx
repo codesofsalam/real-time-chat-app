@@ -27,7 +27,9 @@ const Navbar = () => {
               className="p-2 rounded-lg hover:bg-blue-50 transition-all inline-flex items-center gap-2"
             >
               <Settings className="size-5 text-blue-600" />
-              <span className="hidden sm:inline font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Settings</span>
+              <span className="hidden sm:inline font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                Settings
+              </span>
             </Link>
 
             {authUser && (
@@ -37,7 +39,9 @@ const Navbar = () => {
                   className="p-2 rounded-lg hover:bg-blue-50 transition-all inline-flex items-center gap-2"
                 >
                   <User className="size-5 text-blue-600" />
-                  <span className="hidden sm:inline font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Profile</span>
+                  <span className="hidden sm:inline font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                    Profile
+                  </span>
                 </Link>
 
                 <button

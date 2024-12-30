@@ -25,14 +25,20 @@ const ChatHeader = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900">{selectedUser.fullName}</h3>
-            <p className={`text-sm ${isOnline ? 'text-green-600' : 'text-gray-500'}`}>
-              {isOnline ? 'Online' : 'Offline'}
+            <h3 className="font-semibold text-gray-900">
+              {selectedUser.fullName}
+            </h3>
+            <p
+              className={`text-sm ${
+                isOnline ? "text-green-600" : "text-gray-500"
+              }`}
+            >
+              {isOnline ? "Online" : "Offline"}
             </p>
           </div>
         </div>
 
-        <button 
+        <button
           onClick={() => setSelectedUser(null)}
           className="p-2 rounded-full hover:bg-gray-100 transition-colors"
         >

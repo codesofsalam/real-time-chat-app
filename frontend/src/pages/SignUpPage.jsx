@@ -46,8 +46,10 @@ const SignUpPage = () => {
         <div className="w-full max-w-md space-y-8 backdrop-blur-xl bg-white/80 p-8 rounded-3xl shadow-xl">
           <div className="text-center">
             <div className="flex flex-col items-center gap-3">
-              <div className="size-16 rounded-2xl bg-primary/10 flex items-center justify-center 
-                           hover:bg-primary/20 transition-all duration-300 transform hover:scale-105">
+              <div
+                className="size-16 rounded-2xl bg-primary/10 flex items-center justify-center 
+                           hover:bg-primary/20 transition-all duration-300 transform hover:scale-105"
+              >
                 <MessageSquare className="size-8 text-primary" />
               </div>
               <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
@@ -63,7 +65,9 @@ const SignUpPage = () => {
             <div className="space-y-4">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-base">Full Name</span>
+                  <span className="label-text font-semibold text-base">
+                    Full Name
+                  </span>
                 </label>
                 <div className="relative group">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -75,14 +79,18 @@ const SignUpPage = () => {
                              focus:bg-white transition-all duration-300 hover:shadow-md"
                     placeholder="Enter Your Full Name"
                     value={formData.fullName}
-                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, fullName: e.target.value })
+                    }
                   />
                 </div>
               </div>
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-base">Email</span>
+                  <span className="label-text font-semibold text-base">
+                    Email
+                  </span>
                 </label>
                 <div className="relative group">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -94,14 +102,18 @@ const SignUpPage = () => {
                              focus:bg-white transition-all duration-300 hover:shadow-md"
                     placeholder="you@example.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                   />
                 </div>
               </div>
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-base">Password</span>
+                  <span className="label-text font-semibold text-base">
+                    Password
+                  </span>
                 </label>
                 <div className="relative group">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -113,7 +125,9 @@ const SignUpPage = () => {
                              focus:bg-white transition-all duration-300 hover:shadow-md"
                     placeholder="••••••••"
                     value={formData.password}
-                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, password: e.target.value })
+                    }
                   />
                   <button
                     type="button"
@@ -150,8 +164,11 @@ const SignUpPage = () => {
           <div className="text-center">
             <p className="text-base-content/60 text-base">
               Already have an account?{" "}
-              <Link to="/login" className="link link-primary font-semibold 
-                                         hover:text-secondary transition-colors">
+              <Link
+                to="/login"
+                className="link link-primary font-semibold 
+                                         hover:text-secondary transition-colors"
+              >
                 Sign in
               </Link>
             </p>
