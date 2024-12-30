@@ -25,7 +25,7 @@ const Sidebar = () => {
       <div className="border-b border-indigo-100 w-full p-5 backdrop-blur-sm bg-white/50">
         <div className="flex items-center gap-2">
           <Users className="size-6 text-indigo-600" />
-          <span className="hidden lg:block font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+          <span className="hidden lg:block font-bold text-primary">
             Contacts
           </span>
         </div>

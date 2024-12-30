@@ -13,12 +13,10 @@ const Navbar = () => {
             to="/"
             className="flex items-center gap-3 hover:opacity-90 transition-colors"
           >
-            <div className="size-10 rounded-xl bg-blue-100 flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-              <MessageSquare className="size-5 text-blue-600" />
+            <div className="size-10 rounded-2xl bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-all duration-300 transform hover:scale-105">
+              <MessageSquare className="size-5 text-primary" />
             </div>
-            <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              SalamChat
-            </h1>
+            <h1 className="text-xl font-bold text-primary">SalamChat</h1>
           </Link>
 
           <div className="flex items-center gap-2">
@@ -26,8 +24,8 @@ const Navbar = () => {
               to="/settings"
               className="p-2 rounded-lg hover:bg-blue-50 transition-all inline-flex items-center gap-2"
             >
-              <Settings className="size-5 text-blue-600" />
-              <span className="hidden sm:inline font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              <Settings className="size-5 text-primary" />
+              <span className="hidden sm:inline font-bold text-primary">
                 Settings
               </span>
             </Link>
@@ -38,8 +36,8 @@ const Navbar = () => {
                   to="/profile"
                   className="p-2 rounded-lg hover:bg-blue-50 transition-all inline-flex items-center gap-2"
                 >
-                  <User className="size-5 text-blue-600" />
-                  <span className="hidden sm:inline font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                  <User className="size-5 text-primary" />
+                  <span className="hidden sm:inline font-bold text-primary">
                     Profile
                   </span>
                 </Link>

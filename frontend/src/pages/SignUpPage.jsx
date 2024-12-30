@@ -41,145 +41,132 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="min-h-screen grid lg:grid-cols-2 bg-gradient-to-br from-base-100 to-base-200">
-      <div className="flex flex-col justify-center items-center p-8 sm:p-16">
-        <div className="w-full max-w-md space-y-8 backdrop-blur-xl bg-white/80 p-8 rounded-3xl shadow-xl">
-          <div className="text-center">
-            <div className="flex flex-col items-center gap-3">
-              <div
-                className="size-16 rounded-2xl bg-primary/10 flex items-center justify-center 
-                           hover:bg-primary/20 transition-all duration-300 transform hover:scale-105"
-              >
-                <MessageSquare className="size-8 text-primary" />
-              </div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                Create Account
-              </h1>
-              <p className="text-base-content/60 text-lg">
-                Get started with your free account
-              </p>
+    <div className="min-h-screen flex bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5 ">
+      <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-primary/10 to-secondary/10 p-12">
+        <div className="w-full max-w-lg mx-auto flex flex-col justify-center">
+          <div className="relative">
+            <div className="absolute -left-6 -top-6 size-24 bg-primary/10 rounded-full blur-2xl" />
+            <div className="absolute right-8 bottom-8 size-32 bg-secondary/10 rounded-full blur-2xl" />
+            <div className="relative bg-white/30 backdrop-blur-lg rounded-3xl p-8 shadow-xl">
+              <AuthImagePattern subtitle="Connect with friends, share moments, and stay in touch with your loved ones." />
             </div>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="space-y-4">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-base">
-                    Full Name
-                  </span>
-                </label>
-                <div className="relative group">
-                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                    <User className="size-5 text-primary/60 group-hover:text-primary transition-colors" />
-                  </div>
-                  <input
-                    type="text"
-                    className="input input-bordered w-full pl-12 h-12 bg-white/50 
-                             focus:bg-white transition-all duration-300 hover:shadow-md"
-                    placeholder="Enter Your Full Name"
-                    value={formData.fullName}
-                    onChange={(e) =>
-                      setFormData({ ...formData, fullName: e.target.value })
-                    }
-                  />
-                </div>
-              </div>
-
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-base">
-                    Email
-                  </span>
-                </label>
-                <div className="relative group">
-                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                    <Mail className="size-5 text-primary/60 group-hover:text-primary transition-colors" />
-                  </div>
-                  <input
-                    type="email"
-                    className="input input-bordered w-full pl-12 h-12 bg-white/50 
-                             focus:bg-white transition-all duration-300 hover:shadow-md"
-                    placeholder="you@example.com"
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                  />
-                </div>
-              </div>
-
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-base">
-                    Password
-                  </span>
-                </label>
-                <div className="relative group">
-                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                    <Lock className="size-5 text-primary/60 group-hover:text-primary transition-colors" />
-                  </div>
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    className="input input-bordered w-full pl-12 h-12 bg-white/50 
-                             focus:bg-white transition-all duration-300 hover:shadow-md"
-                    placeholder="••••••••"
-                    value={formData.password}
-                    onChange={(e) =>
-                      setFormData({ ...formData, password: e.target.value })
-                    }
-                  />
-                  <button
-                    type="button"
-                    className="absolute inset-y-0 right-0 pr-4 flex items-center"
-                    onClick={() => setShowPassword(!showPassword)}
-                  >
-                    {showPassword ? (
-                      <EyeOff className="size-5 text-base-content/40 hover:text-primary transition-colors" />
-                    ) : (
-                      <Eye className="size-5 text-base-content/40 hover:text-primary transition-colors" />
-                    )}
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              className="btn btn-primary w-full h-12 text-lg font-semibold 
-                       hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
-              disabled={isSigningUp}
-            >
-              {isSigningUp ? (
-                <>
-                  <Loader2 className="size-5 animate-spin" />
-                  Creating account...
-                </>
-              ) : (
-                "Create Account"
-              )}
-            </button>
-          </form>
-
-          <div className="text-center">
-            <p className="text-base-content/60 text-base">
-              Already have an account?{" "}
-              <Link
-                to="/login"
-                className="link link-primary font-semibold 
-                                         hover:text-secondary transition-colors"
-              >
-                Sign in
-              </Link>
-            </p>
           </div>
         </div>
       </div>
 
-      <AuthImagePattern
-        title="Join our community"
-        subtitle="Connect with friends, share moments, and stay in touch with your loved ones."
-      />
+      <div className="flex-1 flex items-center justify-center p-6">
+        <div className="w-full max-w-md">
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl p-8">
+            <div className="text-center mb-8 mt-5">
+              <div className="inline-block p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl mb-4">
+                <MessageSquare className="size-8 text-primary" />
+              </div>
+              <h1 className="text-2xl font-bold text-primary">
+                Create Account
+              </h1>
+              <p className="text-base-content/60 mt-2">
+                Get started with your free account
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Full Name
+                  </label>
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-base-content/40" />
+                    <input
+                      type="text"
+                      className="input input-bordered w-full pl-10 bg-white/50 focus:bg-white"
+                      placeholder="Enter your full name"
+                      value={formData.fullName}
+                      onChange={(e) =>
+                        setFormData({ ...formData, fullName: e.target.value })
+                      }
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Email
+                  </label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-base-content/40" />
+                    <input
+                      type="email"
+                      className="input input-bordered w-full pl-10 bg-white/50 focus:bg-white"
+                      placeholder="you@example.com"
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Password
+                  </label>
+                  <div className="relative">
+                    <Lock className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-base-content/40" />
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      className="input input-bordered w-full pl-10 bg-white/50 focus:bg-white"
+                      placeholder="••••••••"
+                      value={formData.password}
+                      onChange={(e) =>
+                        setFormData({ ...formData, password: e.target.value })
+                      }
+                    />
+                    <button
+                      type="button"
+                      className="absolute right-3 top-1/2 -translate-y-1/2"
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {showPassword ? (
+                        <EyeOff className="size-5 text-base-content/40" />
+                      ) : (
+                        <Eye className="size-5 text-base-content/40" />
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                className="btn btn-primary w-full hover:scale-[1.02] transition-transform"
+                disabled={isSigningUp}
+              >
+                {isSigningUp ? (
+                  <>
+                    <Loader2 className="size-5 animate-spin" />
+                    Creating account...
+                  </>
+                ) : (
+                  "Create Account"
+                )}
+              </button>
+            </form>
+
+            <div className="mt-6 text-center">
+              <p className="text-base-content/60">
+                Already have an account?{" "}
+                <Link
+                  to="/login"
+                  className="text-primary hover:text-primary/80 font-medium"
+                >
+                  Sign in
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
