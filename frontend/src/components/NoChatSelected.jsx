@@ -19,7 +19,7 @@ const NoChatSelected = () => {
             Welcome to SalamChat!
           </h2>
           <p className="text-gray-700 text-lg">
-            Select a conversation from the sidebar to start chatting
+            Start Your Conversation!
           </p>
         </div>
       </div>
