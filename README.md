@@ -10,6 +10,11 @@ A real-time chat application built using the MERN stack (MongoDB, Express.js, Re
 
 ## Setup
 
+### Prerequisites
+
+- Node.js
+- npm
+  
 ### Clone the repository:
 ```bash
 git clone https://github.com/codesofsalam/salamchat-chatapp.git
@@ -59,10 +64,10 @@ npm start
 ## Repository Information
 
 - **Repository:** [codesofsalam/salamchat-chatapp](https://github.com/codesofsalam/salamchat-chatapp)
-- **Commit OID:** dd23d2ac5e8314e453de01e74db5cef187f4f046
+
 
 ## Language Composition
 
 - **JavaScript:** 99.3%
 - **Other:** 0.7%
-```
+
