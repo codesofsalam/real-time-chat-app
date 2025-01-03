@@ -1,4 +1,3 @@
-```markdown
 # SalamChat
 
 A real-time chat application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) with Socket.IO for real-time communication.
