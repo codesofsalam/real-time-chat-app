@@ -1,15 +1,14 @@
-SalamChat
+**SalamChat**
 
 A real-time chat application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) with Socket.IO for real-time communication.
 
-Features:
+**Features:**
 
 Real-time chat: Send and receive messages with other users instantly.
 User authentication: Sign up and sign in to the application.
 Private messaging: Chat with individual users privately.
-Setup
 
-Clone the repository:
+**Setup Clone the repository:**
 Bash
 
 git clone https://github.com/your-username/salamchat.git
