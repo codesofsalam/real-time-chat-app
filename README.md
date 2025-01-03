@@ -1,5 +1,3 @@
-To add the language composition and repo information to the README file, you can include it in a section like this:
-
 ```markdown
 # SalamChat
 
@@ -15,12 +13,12 @@ A real-time chat application built using the MERN stack (MongoDB, Express.js, Re
 
 ### Clone the repository:
 ```bash
-git clone https://github.com/your-username/salamchat.git
+git clone https://github.com/codesofsalam/salamchat-chatapp.git
 ```
 
 ### Install dependencies:
 ```bash
-cd salamchat
+cd salamchat-chatapp
 npm install
 ```
 
